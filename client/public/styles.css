@@ -1,0 +1,285 @@
+body {
+   background: rgb(225, 225, 225);
+}
+
+input {
+   border: solid;
+   border-width: 3px;
+   border-color: rgb(0, 0, 0);
+}
+
+/* Navigation Bar Section */
+
+.navbar-dark .nav-item.active .nav-link, .navbar-dark .nav-item .nav-link:active, .navbar-dark .nav-item .nav-link:focus {
+   color: rgb(255, 0, 0);
+}
+
+
+
+/* Popup Section */
+
+/* Popup Container */
+.popup {
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+}
+
+/* Popup */
+.popup .popup-text {
+   visibility: hidden;
+   position: absolute;
+   left: 50%;
+   /* bottom: 125%; */
+   width: 200px;
+   text-align: left;
+   background-color: rgb(150, 150, 150);
+   border: solid;
+   border-width: 5px;
+   border-color: rgb(0, 0, 0);
+   border-radius: 10px;
+   padding: 10px;
+   margin-left: -100px;
+   margin-top: 20px;
+   z-index: 1;
+}
+
+/* Popup Pointer */
+/* .popup .popup-text::after {
+   content: "";
+   position: absolute;
+   top: 100%;
+   left: 50%;
+   margin-left: -5px;
+   border-width: 5px;
+   border-style: solid;
+   border-color: #555 transparent transparent transparent;
+} */
+
+/* Display Popup */
+.popup:hover span{
+   visibility: visible;
+   z-index: 5;
+   font-weight: bold;
+   color:rgb(0, 0, 0);
+   animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+   0% { opacity: 0; }
+   50% { opacity: 0; }
+   100% { opacity: 1; }
+}
+
+
+
+/* Card Styling Section */
+
+#card-home, #card-login, #card-create-account, #card-login, #card-deposit, #card-withdraw, #card-balance, #card-all-data {
+   position: relative;
+   left: 50%;
+   top: 5vh;
+   transform: translate(-50%, 0%);
+   width: 60%;
+   background: rgb(255, 255, 255);
+}
+
+#card-header-home, #card-header-login, #card-header-create-account, #card-header-login, #card-header-deposit, #card-header-withdraw, #card-header-balance, #card-header-all-data {
+   text-align: center;
+   font-size: 22px;
+   font-weight: bold;
+   color: rgb(0,0,0);
+   background: rgb(75, 75, 75);
+}
+
+#card-body-home, #card-body-login, #card-body-create-account, #card-body-login, #card-body-deposit, #card-body-withdraw, #card-body-balance, #card-body-all-data {
+   font-size: 20px;
+   font-weight: bold;
+   color: rgb(0, 0, 0);
+   background: rgb(175, 175, 175);
+}
+
+#card-home, #card-deposit, #card-withdraw, #card-balance {
+   text-align: center;
+}
+
+
+
+/* Title Section */
+
+.title-container {
+   position: relative;
+   width: 100%;
+   height: 10vh;
+   text-align: center;
+   background: rgb(0,0,0);
+}
+
+.title-div {
+   position: relative;
+   top: 50%;
+   transform: translate(0%, -50%);
+}
+
+.title {
+   font-size: 25px;
+   font-weight: bold;
+   color: rgb(255, 0, 0);
+}
+
+
+
+/* Create Account Tab, Login Tab, & Logged In User Display */
+
+#account-div {
+   position: absolute;
+   width: 10%;
+   right: 4px;
+   top: 4px;
+   font-size: 12px;
+   font-weight: bold;
+   text-align: right;
+}
+
+#create-account-div {
+   position: relative;
+   width: 100%;
+   height: 4vh;
+   text-align: center;
+   padding: 3px;
+   margin: 1px;
+}
+
+#login-div {
+   position: relative;
+   width: 100%;
+   height: 4vh;
+   text-align: center;
+   padding: 3px;
+   margin: 1px;
+}
+
+#create-account-anchor, #login-anchor {
+   color: rgb(255, 0, 0);
+   font-weight: bold;
+}
+
+#create-account-anchor:active, #login-anchor:active {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 11px;
+   box-sizing: border-box;
+   border-style: solid;
+   border-width: 3px;
+   border-color: rgb(200, 0, 0);
+   box-shadow: 0px 0px 2px 1px rgb(115, 115, 115);
+}
+
+#login-status-div {
+   position: relative;
+   top: 10px;
+   text-align: right;
+}
+
+#login-status-span {
+   font-weight: bold;
+   padding: 20px
+}
+
+
+
+/* Navigation Bar */
+
+.navigation-container {
+   position: relative;
+   width: 100%;
+   height: 8vh;
+   text-align: center;
+   background: rgb(40,40,40);
+}
+
+/* .navigation-div {
+} */
+
+/* .navigation-list {
+} */
+
+.navigation-item {
+   width: 20%;
+   padding: 0px 20px;
+}
+
+.navigation-link {
+   height: auto;
+   padding: 0px 0px;
+   position: relative;
+   font-weight: bold;
+   box-sizing: border-box;
+   border-style: solid;
+   border-width: 3px;
+   border-color: rgb(0, 0, 0);
+   border-radius: 7px;
+   box-shadow: 0px 0px 2px 1px rgb(150, 150, 150);
+}
+
+.navigation-link:hover {
+   border-style: solid;
+   border-width: 3px;
+   border-color: rgb(255, 0, 0);
+}
+
+.navigation-link:active {
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   height: auto;
+   width: 95%;
+   font-size: 14px;
+   box-sizing: border-box;
+   border-style: solid;
+   border-width: 3px;
+   border-color: rgb(200, 0, 0);
+   box-shadow: 0px 0px 2px 1px rgb(115, 115, 115);
+}
+
+
+
+/* All Data Section */
+
+.alldata-table {
+   table-layout: fixed;
+   position: relative;
+   left: 0%;
+   width: 100%;
+   text-align: center;
+}
+
+.alldata-table-head {
+   color: rgb(0,0,0);
+}
+
+.alldata-table-head-row {
+   border-bottom: solid 3px rgb(0, 0, 0);
+}
+
+/* .alldata-table-heading {
+} */
+
+.alldata-table-body {
+   color: rgb(0, 0, 0);
+}
+
+.alldata-table-body-row {
+   font-size: 16px;
+   border-bottom: solid 1px rgb(0, 0, 0);
+}
+
+.alldata-table-body-row:hover {
+   color:rgb(0, 150, 0);
+   background-color: rgb(175, 175, 175);
+}
+
+/* .alldata-table-data {
+} */
