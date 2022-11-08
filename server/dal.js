@@ -1,13 +1,11 @@
-let MongoClient = require('mongodb').MongoClient;
-let url = 'mongodb://localhost:27017';
+const MongoClient = require('mongodb').MongoClient;
+const url = 'mongodb+srv://badbankuser:badbankpassword@badbankcluster.dugi8m4.mongodb.net/?retryWrites=true&w=majority';
 let db = null;
 
-// Connect to Mongo database and perform actions.
 MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
-   console.log('Successfully Connected To Database Server');
+   console.log('Connected Successfully To The Database Server');
 
-   // Connect to Mongo database.
-   db = client.db('myproject');
+   db = client.db('badbankdatabase');
 });
 
 // Create user account.

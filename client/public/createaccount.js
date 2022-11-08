@@ -47,35 +47,22 @@ function CreateAccount() {
 
       // If all form fields have input, enable the Create Account button. If email field matches an existing account, disable the Create Account button. If administrator, enable the Create Account and Delete Account buttons.
       let existingAccount = document.getElementById('email').value;
-      let fields = false;
-      let existing = false;
-      let admin = false;
 
       ctx.users.map((element, index, array) => {
-         if (name && email && password.length > 7) {
-            fields = true;
+         if (name && email && password.length > 7 && element.email != existingAccount) {
+            setcreateButton(false);
          }
-         if (element.email == existingAccount) {
-            existing = true;
+         else {
+            setcreateButton(true);
          }
          if (name == 'admin' && email == 'admin@badbank.com' && password == 'password') {
-            admin = true;
+            setcreateButton(false);
+            setdeleteButton(false);
+         }
+         else {
+            setdeleteButton(true);
          }
       });
-
-      if (fields && !existing || admin) {
-         setcreateButton(false);
-      }
-      else {
-         setcreateButton(true);
-      }
-
-      if (admin) {
-         setdeleteButton(false);
-      }
-      else {
-         setdeleteButton(true);
-      }
    }
 
    // Validate the form field submissions.
