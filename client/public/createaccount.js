@@ -46,23 +46,43 @@ function CreateAccount() {
       }
 
       // If all form fields have input, enable the Create Account button. If email field matches an existing account, disable the Create Account button. If administrator, enable the Create Account and Delete Account buttons.
-      let existingAccount = document.getElementById('email').value;
+      let inputName = document.getElementById('name').value;
+      let inputEmail = document.getElementById('email').value;
+      let inputPassword = document.getElementById('password').value;
+      let disableCreateAccount = false;
+      let adminUser = false;
+      let disableDeleteAccount = true;
 
       ctx.users.map((element, index, array) => {
-         if (name && email && password.length > 7 && element.email != existingAccount) {
-            setcreateButton(false);
+         if (element.email == inputEmail) {
+            disableCreateAccount = true;
          }
-         else {
-            setcreateButton(true);
-         }
-         if (name == 'admin' && email == 'admin@badbank.com' && password == 'password') {
-            setcreateButton(false);
-            setdeleteButton(false);
-         }
-         else {
-            setdeleteButton(true);
+         if (element.email == 'admin@badbank.com' && element.loggedIn == true) {
+            adminUser = true;
          }
       });
+
+      if (disableCreateAccount == false) {
+         if (name && email && password.length > 7) {
+            disableCreateAccount = false;
+         }
+         else {
+            disableCreateAccount = true;
+         }
+      }
+
+      if (adminUser == true && email != 'admin@badbank.com') {
+         if (name && email && password.length > 7) {
+            ctx.users.map((element, index, array) => {
+               if (element.name == inputName && element.email == inputEmail && element.password == inputPassword) {
+                  disableDeleteAccount = false;
+               }
+            });
+         }
+      }
+
+      setcreateButton(disableCreateAccount);
+      setdeleteButton(disableDeleteAccount);
    }
 
    // Validate the form field submissions.

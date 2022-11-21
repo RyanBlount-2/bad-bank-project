@@ -3,7 +3,7 @@ const url = 'mongodb+srv://badbankuser:badbankpassword@badbankcluster.dugi8m4.mo
 let db = null;
 
 MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
-   console.log('Connected Successfully To The Database Server');
+   console.log('Connected Successfully To The Database');
 
    db = client.db('badbankdatabase');
 });
@@ -11,7 +11,7 @@ MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
 // Create user account.
 function create(name, email, password) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       try {
          collection.insertOne(
             {'name': name, 'email': email, 'password': password, 'balance': 0, 'loggedIn': false, 'displayed': false}
@@ -26,7 +26,7 @@ function create(name, email, password) {
 // Delete user account.
 function remove(email) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       try {
          collection.deleteOne(
             {"email" : email},
@@ -42,7 +42,7 @@ function remove(email) {
 // Login to user account.
 function login(email) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       collection.updateOne(
          {'email': email},
          {$set: {'loggedIn': true, 'displayed': true}}
@@ -53,7 +53,7 @@ function login(email) {
 // Logout of user account.
 function logout(email) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       collection.updateOne(
          {'email': email},
          {$set: {'loggedIn': false, 'displayed': false}}
@@ -64,7 +64,7 @@ function logout(email) {
 // Deposit into user account.
 function deposit(email, balance) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       collection.updateOne(
          {'email': email},
          {$set: {'balance': balance}}
@@ -75,7 +75,7 @@ function deposit(email, balance) {
 // Withdraw from user account.
 function withdraw(email, balance) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       collection.updateOne(
          {'email': email},
          {$set: {'balance': balance}}
@@ -86,7 +86,7 @@ function withdraw(email, balance) {
 // Show user account balance.
 function balance(email, balance) {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       collection.updateOne(
          {'email': email},
          {$set: {'balance': balance}}
@@ -97,7 +97,7 @@ function balance(email, balance) {
 // Show all user accounts.
 function all() {
    return new Promise((resolve, reject) => {
-      let collection = db.collection('users');
+      let collection = db.collection('badbankcollection');
       collection
          .find({})
          .toArray(function(err, docs) {

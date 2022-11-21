@@ -5,7 +5,9 @@
    "description": "",
    "main": "index.js",
    "scripts": {
-      "start": "concurrently \"cd server && node server.js\" \"cd client && npm start\"",
+      "start": "concurrently \"npm run server\" \"npm run client\"",
+      "server": "node server/server.js",
+      "client": "cd client && npm start",
       "predeploy" : "npm run build",
       "deploy" : "gh-pages -d build",
       "test": "echo \"Error: no test specified\" && exit 1"

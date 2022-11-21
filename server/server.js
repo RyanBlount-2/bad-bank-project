@@ -86,4 +86,4 @@ app.get('/account/all', function(req, res) {
 
 let port = 3001;
 app.listen(port);
-console.log('Server Running On Port: ' + port);
+console.log('Connected Successfully To The Server - Running On Port: ' + port);
