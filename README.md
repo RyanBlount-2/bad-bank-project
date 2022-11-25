@@ -1,5 +1,5 @@
 # Bad Bank Capstone Project
-> ### Full-Stack Bad Bank Application With Front-End, Server, & Back-End
+> ### Full-Stack Banking Application With Front-End, Server, & Back-End
 
 <!-- ![Bad Bank Project](Images/BadBank-Image.png "Bad Bank Project") -->
 <!-- <img src="Images/BadBank-Image.png" alt="Bad Bank Project" width="1000" height="600"> -->
