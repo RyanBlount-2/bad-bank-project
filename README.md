@@ -15,7 +15,7 @@
      - Express API
      - MongoDB Database
      - Admin & General User Account Types
-     - Banking Functionality Including Creating & Deleting Accounts, Logging In & Out Of Accounts, Depositing & Withdrawing Money, Checking Account Balances, & Viewing All Account Data.  
+     - Banking Functionality Including Creating & Deleting Accounts, Logging In & Out Of Accounts, Depositing & Withdrawing Money, Checking Account Balances, & Viewing All Account Data.
    
 ## Instructions For Use:
 <!-- > You can access my project via [GitHub Pages](https://ryanblount-2.github.io/dice-project/). -->
