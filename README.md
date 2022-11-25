@@ -15,7 +15,7 @@
      - Express API
      - MongoDB Database
      - Admin & General User Account Types
-     - Banking Functionality Including Creating & Deleting Accounts, Logging In & Out Of Accounts, Depositing & Withdrawing Money, Checking Account Balances, & Viewing All Account Data.
+     - Banking Functionality Including Creating & Deleting Accounts, Logging In & Out Of Accounts, Depositing & Withdrawing Money, Checking Account Balances, & Viewing All Account Data.  
    
 ## Instructions For Use:
 <!-- > You can access my project via [GitHub Pages](https://ryanblount-2.github.io/dice-project/). -->
@@ -29,7 +29,7 @@
     5) Test the banking application. Try creating & deleting accounts, logging in & out of accounts, depositing & withdrawing money, checking account balances, & viewing all account data. On the Login/Logout page, enter email: 'admin@badbank.com', & password: 'password' to login as an administrator and use additional features.
 
 ## Usage:
-> Great for testing banking app functionality
+> Great for testing banking app functionality.
 
 ## Support: 
 > [LinkedIn Profile](https://linkedin.com/in/ryanblount2)  
