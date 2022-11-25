@@ -224,7 +224,7 @@ function CreateAccount() {
             ):(
                <>
                   {/* Button for adding another account. This also resets the form fields to their default values. */}
-                  <button className="btn btn-light" type="submit" onClick={clearForm}>Add Another Account</button>
+                  <button className="btn btn-light" type="submit" onClick={clearForm}>Manage Another Account</button>
                </>
             )}
          />

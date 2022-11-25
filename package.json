@@ -1,6 +1,6 @@
 {
    "name": "bad_bank_capstone_project",
-   "homepage": "https://ryanblount-2.github.io/bad-bank-project/client/public/index.html",
+   "homepage": "https://ryanblount-2.github.io/bad-bank-project/",
    "version": "1.0.0",
    "description": "",
    "main": "index.js",
@@ -8,8 +8,8 @@
       "predeploy": "npm run build",
       "deploy": "gh-pages -d build",
       "start": "concurrently \"npm run server\" \"npm run client\"",
-      "server": "node server/server.js",
       "client": "cd client && npm start",
+      "server": "node server/server.js",
       "test": "echo \"Error: no test specified\" && exit 1"
    },
    "keywords": [],
